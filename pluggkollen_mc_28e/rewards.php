@@ -29,8 +29,8 @@ else {
       <li><a href="firstpage.php">Hem</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a class="active" href="rewards.php">Belöningar</a></li>
-      <li><a href="meddelanden">Meddelanden</a></li>
-      <li ><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
+      <li><a href="message.php">Meddelanden</a></li>
+      <li><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
     </ul>
   </div>
   <?php $average = avgFunction($username); ?>
