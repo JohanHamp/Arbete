@@ -23,8 +23,11 @@ else {
   <div class="header">
     <h1> Meddelanden </h1>
     <ul>
-      <li><a class="active" href="firstpage.php">Hem</a></li>
+      <li><a href="firstpage.php">Hem</a></li>
       <li><a href="profil.php">Profil</a></li>
+      <li><a href="rewards.php">Belöningar</a></li>
+      <li><a class="active" href="meddelanden">Meddelanden</a></li>
+      <li ><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
     </ul>
   </div>
 
