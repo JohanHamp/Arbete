@@ -31,13 +31,11 @@
       som så att du loggar in och sedan söker på de kurser du är intresserad av. På varje kurs
       kan du sedan se om det finns några mentorer att kontakta (alltså studenter som läst kursen). 
       Givetvis kan även du bli mentor om du redan har färdiga kurser, så länge de inte är äldre än 2 år!
-
-      Är du inte redan medlem på Antagning.se är du välkommen att registrera dig till höger 
-      (du blir vidarebefodrad till Antagning.se).
     </div>
     </div>
     </div>
     <div class="footer">
+      <center style="font-color:lightgrey;">villkor | kontakt | etc | blahabla</center>
     </div>
   </body>
 </html>

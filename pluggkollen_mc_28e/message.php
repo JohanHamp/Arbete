@@ -33,7 +33,26 @@ else {
     <br>
   </div>
 
+  <div class="ratingwindow">Ge omdöme:
+    <?php
+      include 'rewardsprocess.php';
 
+      if (isset($_POST['submit'])) {
+        echo gradeFunction('ckeisu@gmail.com', $_POST['betyg']);
+        return;
+      }
+
+      echo'
+      <form action="" name="person" method="post">
+      <label>1</label><input type="radio" name="betyg" value="1"/>
+      <label>2</label><input type="radio" name="betyg" value="2"/>
+      <label>3</label><input type="radio" name="betyg" value="3"/>
+      <label>4</label><input type="radio" name="betyg" value="4"/>
+      <label>5</label><input type="radio" name="betyg" value="5"/>
+      <input type="submit" value=" Skicka " name="submit"/>
+      </form>';
+    ?>
+  </div>
 
   <div class="footer">
 
@@ -75,7 +94,7 @@ else {
 
       <form name="Skicka" method="POST" onsubmit="" action="SendMessageProcess.php">
         <textarea id="message" name="message" rows="10" cols="40">Skriv ditt meddelande!</textarea>
-        <input type='text' id="kontakt" name="kontakt"> skriv kontakt här! </textarea>
+        <textarea id="kontakt" name="kontakt" rows="1" cols="25"> skriv kontakt här! </textarea>
         <input type="submit" value="skicka" id="skicka">
       </form>
     </div>

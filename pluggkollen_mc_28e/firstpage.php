@@ -39,6 +39,7 @@
         <?php
         //sök processen
         include 'connect.php';
+        include 'rewardsprocess.php';
 
         if (isset($_POST['searchbar'])){
 
@@ -64,10 +65,11 @@
               while($row = $searchquery->fetch_assoc())
               {
                 $namn = $row['namn'];
-                $email = $rwo['epost'];
+                $email = $row['epost'];
+                $omdome = avgFunction($email);
                 $universitet = $row['universitet'];
 
-                echo "<div class = 'mentor'> $namn </br> Omdöme: 5 </br> Universitet: $universitet </br>
+                echo "<div class = 'mentor'> $namn </br> Omdöme: $omdome </br> Universitet: $universitet </br>
                 <form name='mentorknappen' action='SendMessageProcess.php' method='POST'>
                 <input type='submit' name='FkreceiverId' value='Ta kontakt med $namn' id='mentorknappen'>
                 <input type='hidden' name='message' value='$username vill ta kontakt med dig!'>
@@ -82,10 +84,11 @@
                 while($row = $searchqueryprogram->fetch_assoc())
                 {
                   $namn = $row['namn'];
-                  $email = $rwo['epost'];
+                  $email = $row['epost'];
+                  $omdome = avgFunction($email);
                   $universitet = $row['universitet'];
 
-                  echo "<div class = 'mentor'> $namn </br> Omdöme: 5 </br> Universitet: $universitet </br>
+                  echo "<div class = 'mentor'> $namn </br> Omdöme: $omdome </br> Universitet: $universitet </br>
                   <form name='mentorknappen' action='SendMessageProcess.php' method='POST'>
                   <input type='submit' name='FkreceiverId' value='Ta kontakt med $namn' id='mentorknappen'>
                   <input type='hidden' name='message' value='$username vill ta kontakt med dig!'>

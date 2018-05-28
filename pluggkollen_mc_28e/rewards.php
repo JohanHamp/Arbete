@@ -9,6 +9,7 @@ if(!isset($_SESSION['inlogged']))
 else {
   $username = $_SESSION['username'];
   include 'rewardsprocess.php';
+  
 }
 ?>
 
@@ -32,11 +33,12 @@ else {
       <li ><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
     </ul>
   </div>
+  <?php $average = avgFunction($username); ?>
   <div class="rewards">
   
     <div class="textreward"> 
     Hej <strong><?php echo $username; ?></strong>! Du har "<strong><?php echo countFunction() ?></strong>" st omdömen 
-    och ditt genomsnittliga omdöme är "<strong><?php echo avgFunction() ?></strong>". 
+    och ditt genomsnittliga omdöme är "<strong><?php echo $average; ?></strong>". 
     <em>Så länge du håller ett snittomdöme över 3,5</em> så kan du få belöningar för alla personer du hjälpt. 
     Kolla i belöningstabellen om du har fått tillgång till några särskilda belöningar! <br>
     

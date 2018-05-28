@@ -7,21 +7,20 @@
 
 <?php
 # AVG vad är snittbetyget för $username?
-function avgFunction() {
+function avgFunction($inputemail) {
     include 'connect.php';
-    $username = $_SESSION['username'];
     $sql = "SELECT AVG(rating) AS avgRating
     FROM omdome
-    WHERE username = '$username'";
+    WHERE username = '$inputemail'";
     $result = $conn->query($sql);
     
   
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-        echo $row["avgRating"];
+        return $row["avgRating"];
         }
     } else {
-        echo "Du har inga omdömen ännu!";
+        echo "0 omdömen";
     }}
 ?>
 <?php
@@ -42,8 +41,25 @@ function countFunction() {
       echo "0";
 }}
 ?>
+<?php
+# ge omdome till $gradeduser
+function gradeFunction($gradeduser, $grade) {
+include 'connect.php';
+
+$gradedby = $_SESSION['username'];
 
 
+$sql = "INSERT INTO omdome (rating, username, rating_from)
+VALUES ('$grade', '$gradeduser', '$gradedby')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<script type='text/javascript'>alert('Omdöme skickat);</script>";
+    }
+    else {
+        echo "<script type='text/javascript'>alert('Hoppsan. Något gick fel.);</script>";
+    }
+}
+?>
 
 
 </body>
