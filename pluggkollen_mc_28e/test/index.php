@@ -4,13 +4,13 @@
 </head>
 <body>
 
-<div class="ratingwindow">Ge omdöme:
+<div>Ge omdöme:
 <form action="" name="person" method="post">
-<label>1</label><input type="radio" name="betyg" value="1"/>
-<label>1</label><input type="radio" name="betyg" value="2"/>
-<label>1</label><input type="radio" name="betyg" value="3"/>
-<label>1</label><input type="radio" name="betyg" value="4"/>
-<label>1</label><input type="radio" name="betyg" value="5"/>
+1<input type="radio" name="betyg" value="1"/>
+2<input type="radio" name="betyg" value="2"/>
+3<input type="radio" name="betyg" value="3"/>
+4<input type="radio" name="betyg" value="4"/>
+5<input type="radio" name="betyg" value="5"/>
 <input type="submit" value=" Skicka " name="submit"/>
 </form>
 

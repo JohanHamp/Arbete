@@ -24,8 +24,7 @@
       <li><a class="active" href="firstpage.php">Hem</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a href="rewards.php">Belöningar</a></li>
-      <li><a href="message.php">Meddelanden</a></li>
-      <li><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
+      <li><a href="mentorskap.php">Mentorskap</a></li>
     </ul>
   </div>
   <div class="middle">
@@ -39,20 +38,19 @@
         <?php
         //sök processen
         include 'connect.php';
-        include 'rewardsprocess.php';
 
         if (isset($_POST['searchbar'])){
 
           $search = $_POST['searchbar'];
 
-          $searchquery = $conn->query("SELECT namn, universitet, epost FROM kurs k
+          $searchquery = $conn->query("SELECT namn, universitet FROM kurs k
           JOIN anv_kurs ak
           ON k.kurskod = ak.kurskod
           JOIN user u
           ON ak.personnummer = u.personnummer
           WHERE k.kursnamn = '$search' AND u.anvtyp = 'mentor' AND NOT (epost = '$username' OR u.personnummer = '$username');");
 
-          $searchqueryprogram = $conn->query("SELECT namn, universitet, epost FROM program p
+          $searchqueryprogram = $conn->query("SELECT namn, universitet FROM program p
           JOIN anv_program ap
           ON p.programkod = ap.programkod
           JOIN user u
@@ -65,15 +63,11 @@
               while($row = $searchquery->fetch_assoc())
               {
                 $namn = $row['namn'];
-                $email = $row['epost'];
-                $omdome = avgFunction($email);
                 $universitet = $row['universitet'];
 
-                echo "<div class = 'mentor'> $namn </br> Omdöme: $omdome </br> Universitet: $universitet </br>
-                <form name='mentorknappen' action='SendMessageProcess.php' method='POST'>
-                <input type='submit' name='FkreceiverId' value='Ta kontakt med $namn' id='mentorknappen'>
-                <input type='hidden' name='message' value='$username vill ta kontakt med dig!'>
-                <input type='hidden' name='kontakt' value='$email'>
+                echo "<div class = 'mentor'> $namn </br> Omdöme: 5 </br> Universitet: $universitet </br>
+                <form name='mentorknappen' action='meddelande.php' method='POST'>
+                <input type='submit' value='Ta kontakt med $namn' id='mentorknappen'>
                 </form>
                 </div>";
               }
@@ -84,15 +78,11 @@
                 while($row = $searchqueryprogram->fetch_assoc())
                 {
                   $namn = $row['namn'];
-                  $email = $row['epost'];
-                  $omdome = avgFunction($email);
                   $universitet = $row['universitet'];
 
-                  echo "<div class = 'mentor'> $namn </br> Omdöme: $omdome </br> Universitet: $universitet </br>
-                  <form name='mentorknappen' action='SendMessageProcess.php' method='POST'>
-                  <input type='submit' name='FkreceiverId' value='Ta kontakt med $namn' id='mentorknappen'>
-                  <input type='hidden' name='message' value='$username vill ta kontakt med dig!'>
-                  <input type='hidden' name='kontakt' value='$email'>
+                  echo "<div class = 'mentor'> $namn </br> Omdöme: 5 </br> Universitet: $universitet </br>
+                  <form name='mentorknappen' action='meddelande.php' method='POST'>
+                  <input type='submit' value='Ta kontakt med $namn' id='mentorknappen'>
                   </form>
                   </div>";
                 }
