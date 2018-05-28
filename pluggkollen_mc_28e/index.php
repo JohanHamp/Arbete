@@ -10,7 +10,7 @@
     <h1> Välkommen till pluggkollen! </h1>
   </div>
 
-    <div class="frontpage">
+    <div class="frontpage regulardiv">
 
     <div class='loginlink'>
     <form name="login" method="POST" onsubmit="" action="loginprocess.php">

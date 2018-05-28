@@ -44,6 +44,12 @@ font-size: 16px;
 width: 60%;
 }
 
+.regulardiv {
+  background-color: #f1f1f1;
+  padding: 60px;
+  font-size: 16px;
+  }
+
 
 /* rewardsgrejor */
 
@@ -67,11 +73,7 @@ padding: 60px;
 font-size: 16px;
 }
 
-div {
-background-color: #f1f1f1;
-padding: 60px;
-font-size: 16px;
-}
+
 
 
 /* MENY */
