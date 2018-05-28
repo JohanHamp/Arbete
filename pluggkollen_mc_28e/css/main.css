@@ -1,0 +1,194 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    width: 400px;
+    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    background-color: lightgrey;
+    }
+
+.loginlink{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  }
+
+/* MENY */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* SÖKFUNKTION */
+#searchbar{
+  float: center;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  height: 30px;
+  width: 300px;
+}
+
+.searchbardiv
+{
+  width: 500px;
+  margin: 0 auto ;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.header{
+  background-color: #f1f1f1;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 17px;
+
+}
+.middle {
+  background-color: #f1f1f1;
+  padding: 60px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.about{
+  background-color: #f1f1f1;
+  padding:20px 20px;
+  text-align: left;
+  font-size: 16px;
+
+}
+
+#loginbutton{
+    background-color:green;
+    width:200px;
+    height:50px;
+    color:white;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 60px;
+  text-align: center;
+  margin-top: 20px;
+
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 60px;
+}
+
+.mentor{
+  background: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  width: 400px;
+  margin: 0 auto;
+  color: blue;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  }
+.text{
+  padding: 5px;
+  margin: 0 auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  position: center;
+  width: 700px;
+}
+
+.r1
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.kontaktlista{
+  width: 30px;
+  height: 60px;
+}
+
+.chatbox{
+  width: 400px;
+  min-width: 350px;
+  height: 450px;
+  background: #fff;
+  padding: 25px;
+  margin: 20px auto;
+}
+
+.chatlogs {
+  padding: 10px;
+  width: 400px;
+  height: 450px;
+  overflow: hiden;
+  overflow-y: scroll;;
+}
+
+.chat{
+  display: flex;
+  flex-flow: row wrap;;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat .user-photo{
+  width: auto;
+  height: 16px;
+  background: #8ec3eb;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.chat .chat-message{
+  width: 70%;
+  padding: 15px;
+  margin: 5px 10px 0;
+  background: #1ddced;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.receiver .chat-message{
+  background: #1adda4;
+}
