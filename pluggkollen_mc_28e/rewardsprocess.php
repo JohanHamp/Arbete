@@ -1,3 +1,10 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
 <?php
 # AVG vad är snittbetyget för $username?
 function avgFunction() {
@@ -7,8 +14,8 @@ function avgFunction() {
     FROM omdome
     WHERE username = '$username'";
     $result = $conn->query($sql);
-
-
+    
+  
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
         echo $row["avgRating"];
@@ -35,3 +42,9 @@ function countFunction() {
       echo "0";
 }}
 ?>
+
+
+
+
+</body>
+</html>

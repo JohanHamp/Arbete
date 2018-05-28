@@ -25,6 +25,7 @@
       <li><a href="profil.php">Profil</a></li>
       <li><a href="rewards.php">Belöningar</a></li>
       <li><a href="mentorskap.php">Mentorskap</a></li>
+      <li ><a href="logoutprocess.php">Logga ut <i><?php echo $username?></i></a></li>
     </ul>
   </div>
   <div class="middle">

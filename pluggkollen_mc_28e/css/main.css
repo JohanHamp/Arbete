@@ -1,19 +1,78 @@
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    width: 400px;
-    margin: 0 auto;
-    width: 100%;
-    margin: 0 auto 0 auto;
-    background-color: lightgrey;
-    }
-
-.loginlink{
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  background-color: lightgrey;
   }
+
+.loginlink {
+align-content: center;
+position: absolute;
+right: 20px;
+padding: 10px;
+margin: 0px;
+max-width: 190px;
+background-color: #c4c4c4;
+}
+
+.frontpage {
+background-color: #f1f1f1;
+min-height: 400px;
+}
+
+.loginbutton {
+  align-content: center;
+  background-color:green;
+  margin: 5px;
+  width:160px;
+  height:50px;
+  color:white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.frontpagetext {
+padding: 20px;
+margin: 10px;
+text-align: left;
+font-size: 16px;
+width: 60%;
+}
+
+
+/* rewardsgrejor */
+
+.rewardstabell {
+width: 100%;
+}
+
+.rewardsstriped tbody tr:nth-child(even) {
+background-color: grey;
+}
+
+.textreward {
+width: 80%;
+text-align: left;
+}
+
+
+.rewards {
+background-color: #f1f1f1;
+padding: 60px;
+font-size: 16px;
+}
+
+div {
+background-color: #f1f1f1;
+padding: 60px;
+font-size: 16px;
+}
+
 
 /* MENY */
 ul {
@@ -127,14 +186,16 @@ li a:hover {
   margin-bottom: 10px;
   text-align: left;
   }
-.text{
-  padding: 5px;
-  margin: 0 auto;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  position: center;
-  width: 700px;
-}
+  
+  .text{
+    max-width: 500px;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    position: center;
+  }
+  
 
 .r1
 {
