@@ -1,7 +1,7 @@
 <?php
 
 $uname = "root";
-$pass = "root";
+$pass = "";
 $host = "localhost";
 $dbname = "pluggkollen";
 

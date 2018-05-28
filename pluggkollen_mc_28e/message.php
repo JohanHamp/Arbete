@@ -75,7 +75,7 @@ else {
 
       <form name="Skicka" method="POST" onsubmit="" action="SendMessageProcess.php">
         <textarea id="message" name="message" rows="10" cols="40">Skriv ditt meddelande!</textarea>
-        <textarea id="kontakt" name="kontakt" rows="1" cols="25"> skriv kontakt här! </textarea>
+        <input type='text' id="kontakt" name="kontakt"> skriv kontakt här! </textarea>
         <input type="submit" value="skicka" id="skicka">
       </form>
     </div>
