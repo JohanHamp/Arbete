@@ -56,12 +56,10 @@ IF NOT EXISTS ( SELECT username, rating_from FROM omdome
                 AND $gradeduser = $gradeduser) ";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script type='text/javascript'>alert('Omdöme skickat');</script>";
-        header("Location:message.php");
+        return $grademssage = "Omdöme skickat";                
     }
     else {
-        header("Location:firstpage.php");
-        echo "<script type='text/javascript'>alert('Hoppsan. Något gick fel.);</script>";
+        return $grademessage = "Du har redan gett ett omdöme";   
     }
 }
 ?>

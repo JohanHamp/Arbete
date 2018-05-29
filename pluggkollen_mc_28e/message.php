@@ -14,7 +14,7 @@ else {
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Medelanden </title>
+  <title> Meddelanden </title>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -31,19 +31,19 @@ else {
     </ul>
   </div>
 
-  <div class="Kontakter">
-    <h2> Kontakter </h2>
-    <br>
-  </div>
+
+  <div class="rewards" style="height:600px;">
+
+
 
 <!-- Betygsrutan . Kanske ta bort echo från rutan och returna en variabel istället?  -->
-  <div class="ratingwindow">Ge omdöme på mentorn:
+<div class="ratingwindow">Ge omdöme på mentorn:<?php echo $grademessage; ?>
     <?php
       include 'rewardsprocess.php';
 
       if (isset($_POST['submit'])) {
-        echo gradeFunction($username, $_POST['betyg']);
-        return;
+        gradeFunction($username, $_POST['betyg']);
+        echo $grademessage;
       }
 
       echo'
@@ -58,11 +58,6 @@ else {
     ?>
   </div>
 <!-- Betygsrutan  slut.  -->
-
-  <div class="footer">
-
-
-
 
     <div class="chatbox">
       <div class="chatlogs">
@@ -88,7 +83,7 @@ else {
           }
         } else {echo "0 messages";}
         ?>
-
+><?php echo $grademessage; ?>
         </div>
       </div>
 
@@ -98,8 +93,8 @@ else {
 
 
       <form name="Skicka" method="POST" onsubmit="" action="SendMessageProcess.php">
-        <textarea id="message" name="message" rows="10" cols="40">Skriv ditt meddelande!</textarea>
-        <textarea id="kontakt" name="kontakt" rows="1" cols="25"> skriv kontakt här! </textarea>
+        <textarea id="message" name="message" rows="10" cols="40" placeholder="Skriv ditt meddelande ..."></textarea><br>
+        <input type="text" id="kontakt" name="kontakt" rows="1" cols="25" placeholder="Skriv kontaktens mailadress ..."> <br>
         <input type="submit" value="skicka" id="skicka">
       </form>
     </div>

@@ -226,6 +226,9 @@ li a:hover {
 }
 
 .chatbox{
+  position: absolute;
+  top: 300px;
+  right: 20px;
   width: 400px;
   min-width: 350px;
   height: 450px;
